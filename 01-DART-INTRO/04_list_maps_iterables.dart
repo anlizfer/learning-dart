@@ -4,7 +4,7 @@ void main() {
   print('Length: ${numbers.length}');
   print('Index 0: ${numbers[0]}');
   print('First: ${numbers.first}');
-  print('Reversed: ${numbers.reversed}'); //=> lo convierte a iterable
+  print('Reversed: ${numbers.reversed}'); //=> lo convierte a iterable ()
   
   final reversedNumbers = numbers.reversed;
   print('Iterable: $reversedNumbers');
@@ -15,5 +15,7 @@ void main() {
     return num > 5;
   });
   
-  print('Number Greater: $numberGreaterThan5');//se convierte en un set con valores únicos.
+  print('Number Greater Iterable: $numberGreaterThan5');//se convierte a iterable
+  print('Number Greater List: ${numberGreaterThan5.toList()}');//se convierte a lista
+  print('Number Greater Set: ${numberGreaterThan5.toSet()}');//se convierte a set con valores únicos.
 }
